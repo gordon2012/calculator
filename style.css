@@ -1,0 +1,36 @@
+.wrapper
+{
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 15px;
+  border: 1px black solid;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.answered
+{
+  /*font-size: 35px;*/
+  /*color: red;*/
+}
+
+.flex-calc
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-calc div
+{
+  flex: 1 1 25%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+
+output
+{
+  border: 1px solid black;
+  background-color: white;
+  text-align: right;
+  padding: 5px;
+  height: 2.5em;
+}
