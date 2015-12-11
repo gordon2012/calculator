@@ -1,0 +1,25 @@
+{
+  "name": "zipline-calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordon2012/zipline-calc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gordon2012/zipline-calc/issues"
+  },
+  "homepage": "https://github.com/gordon2012/zipline-calc#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jshint-stylish": "^2.1.0"
+  }
+}
