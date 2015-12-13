@@ -1,3 +1,49 @@
+// onclick for all buttons, calls hasClass to determine type
+// TODO: refactor other clicks to use this one
+// TODO: refactor comments
+//
+$(".btn").on("click", function()
+{
+  var classes = $(this).attr('class').split(' ');
+
+  //console.log(classes);
+
+  var test = function(val)
+  {
+
+    var match = classes.indexOf(val) > -1 ? classes[classes.indexOf(val)] : undefined;
+
+    // console.log(match);
+
+    return match;
+  };
+
+
+  if(test('clear'))
+  {
+    onClear();
+  }
+  if(test('clear-all'))
+  {
+    clearAll();
+  }
+
+  // switch(classes)
+  // {
+  //     case test('clear'):
+  //       onClear();
+  //       break;
+  //     case 'clearAll':
+  //       clearAll();
+  //       break;
+  //     default:
+  // }
+
+
+
+});
+
+
 $(".num").on("click", function()
 {
   if($(this).hasClass("answered"))
