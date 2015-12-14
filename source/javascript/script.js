@@ -3,20 +3,31 @@
 //
 $(".btn").on("click", function()
 {
-  var classes = $(this).attr('class').split(' ');
-  var test = function(val)
-  {
-    return classes.indexOf(val) > -1 ? classes[classes.indexOf(val)] : undefined;
-  };
+  // var classes = $(this).attr('class').split(' ');
+  // var test = function(val)
+  // {
+  //   return classes.indexOf(val) > -1 ? classes[classes.indexOf(val)] : undefined;
+  // };
 
-  if(test('clear'))
+  // if(test('clear'))
+  // {
+  //   onClear();
+  // }
+  // if(test('clear-all'))
+  // {
+  //   clearAll();
+  // }
+
+  if($(this).hasClass('clear'))
   {
     onClear();
   }
-  if(test('clear-all'))
+  if($(this).hasClass('clear-all'))
   {
     clearAll();
   }
+
+
 });
 
 

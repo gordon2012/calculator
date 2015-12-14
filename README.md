@@ -10,4 +10,7 @@
 ### TODOs:
 - Input validation
 - Better looking font/icons for button
-- Better style for output
+- Better style for output, including commas
+- Implement decimal
+- Implement backspace
+- Implement sign change
