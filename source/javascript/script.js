@@ -1,37 +1,6 @@
 // onclick for all buttons, calls hasClass to determine type
-// TODO: refactor other clicks to use this one
 //
 $(".btn").on("click", function()
-{
-  // var classes = $(this).attr('class').split(' ');
-  // var test = function(val)
-  // {
-  //   return classes.indexOf(val) > -1 ? classes[classes.indexOf(val)] : undefined;
-  // };
-
-  // if(test('clear'))
-  // {
-  //   onClear();
-  // }
-  // if(test('clear-all'))
-  // {
-  //   clearAll();
-  // }
-
-  if($(this).hasClass('clear'))
-  {
-    onClear();
-  }
-  if($(this).hasClass('clear-all'))
-  {
-    clearAll();
-  }
-
-
-});
-
-
-$(".num").on("click", function()
 {
   if($(this).hasClass("answered"))
   {
@@ -39,17 +8,30 @@ $(".num").on("click", function()
     $(".btn").removeClass("answered");
   }
 
-  onNum($(this).html());
-});
+  if($(this).hasClass('clear'))
+  {
+    onClear();
+  }
 
-$(".op").on("click", function()
-{
-  onOp($(this).html());
-});
+  if($(this).hasClass('clear-all'))
+  {
+    clearAll();
+  }
 
-$(".equals").on("click", function()
-{
-  equals();
+  if($(this).hasClass('num'))
+  {
+    onNum($(this).html());
+  }
+
+  if($(this).hasClass('op'))
+  {
+    onOp($(this).html());
+  }
+
+  if($(this).hasClass('equals'))
+  {
+    equals();
+  }
 });
 
 
