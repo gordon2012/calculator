@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps');
 
+var useref = require('gulp-useref');
+
 // define the default task and add the watch task to it
 gulp.task('default', ['watch']);
 
@@ -42,6 +44,15 @@ gulp.task('build-js', function()
     .pipe(gulp.dest('public/assets/javascript'));
 });
 
+/* --------------------------------
+  TASK: useref
+-------------------------------- */
+
+gulp.task('useref', function() {
+  return gulp.src('src/*.html')
+    .pipe(useref())
+    .pipe(gulp.dest('dist'));
+});
 
 // WATCHES
 
