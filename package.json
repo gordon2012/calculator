@@ -4,7 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "production": "gulp useref"
+    "build": "gulp useref",
+    "deploy:stage": "npm run build && gh-pages -d dist",
+    "deploy:prod": "npm run build && surge dist calculator.gordondoskas.com"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/gordon2012/calculator#readme",
   "devDependencies": {
+    "gh-pages": "^0.12.0",
     "gulp": "^3.9.0",
     "gulp-jshint": "^2.0.0",
     "gulp-sass": "^2.1.1",
