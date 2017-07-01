@@ -4,9 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "build": "gulp useref",
-    "deploy:stage": "npm run build && gh-pages -d dist",
-    "deploy:prod": "npm run build && surge dist calculator.gordondoskas.com"
+    "build": "echo gulp useref",
+    "deploy:stage": "npm run build && surge dist calculator.gurudreams.win",
+    "deploy:prod": "npm run build && scp -r dist/* hg:/home1/gordon2012/src/calculator"
   },
   "repository": {
     "type": "git",
